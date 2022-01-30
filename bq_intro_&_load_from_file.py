@@ -5,7 +5,7 @@
 
 ### 1, export the GOOGLE_APPLICATION_CREDENTIALS variable to the path where the key is living.
 import os
-key_path = '/Users/saryashawa/Downloads/sarya-sandbox-0586faea03aa.json'
+key_path = 'PATH TO THE KEY FILE YOU DOWNLOADED'
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = key_path
 
 ### 2. import the library
@@ -39,7 +39,7 @@ results = query_job.result()
 
 ### How to load data
 ### Start with initiating some important variables
-table_id =  'sarya-sandbox.dataset_test.loaded_via_py'
+table_id =  'ADD THE TABLE ID FROM BQ'
 job_config = bigquery.LoadJobConfig(
     ### Use the line below if you want to overwrite an existing table
     #write_disposition = bigquery.WriteDisposition.WRITE_TRUNCATE,
@@ -47,7 +47,7 @@ job_config = bigquery.LoadJobConfig(
     skip_leading_rows = 1,
     source_format = bigquery.SourceFormat.CSV,
     )
-csv_file_path = '/Users/saryashawa/Documents/sandbox/bigquery/export_order_2022_01_30_16_05_45.csv'
+csv_file_path = 'PATH TO THE CSV FILE YOU WANT TO LOAD'
 
 ### The loading command is here
 with open(csv_file_path,'rb') as source_file:
