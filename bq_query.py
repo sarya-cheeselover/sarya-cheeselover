@@ -1,7 +1,7 @@
 import os
 from google.cloud import bigquery
 
-key_path = '/Users/saryashawa/Downloads/sarya-sandbox-0586faea03aa.json'
+key_path = 'PATH TO THE KEY FILE YOU DOWNLOADED'
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = key_path
 
 
