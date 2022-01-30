@@ -2,11 +2,11 @@
 import smtplib
 
 
-username = "sari.test.py@gmail.com"
-password = input("type in the password please: ")
+username = "name@email.com"
+password = input("type in the password please: ") #or hard-enter your password.. there are couple of options here.
 
-sent_from = 'sari.test.py@gmail.com'
-to = ['sarya.shawa@gmail.com']
+sent_from = 'sender@email.com'
+to = ['reciepant@email.com']
 subject = 'OMG I DID IT!'
 body = 'Heey heeey duuude \n This is script, sarya created me to send you an email!'
 
