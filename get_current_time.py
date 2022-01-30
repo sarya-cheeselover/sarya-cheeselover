@@ -9,7 +9,7 @@ now = datetime.now()
 print (now.strftime("%H:%M:%S"))
 
 
-with open ("/Users/saryashawa/Documents/test.txt","a") as file:
+with open ("PATH TO FILE TO ADD THE TIMESTAMP","a") as file:
     file.write("Time now is: "+ now.strftime("%H:%M:%S")+"\n")
 
 file.close()
