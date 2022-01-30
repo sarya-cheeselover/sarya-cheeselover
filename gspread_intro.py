@@ -12,7 +12,7 @@
 import gspread
 
 ###create connectiong with google sheet. make sure you put the right path to your json file
-gc = gspread.service_account(filename='/Users/saryashawa/Documents/sandbox/gspread/credentials_account.json')
+gc = gspread.service_account(filename='PATH TO THE KEY FILE DOWNLOADED')
 
 ### create and open a spreadsheet instant. you can open it by name, key or URL. The method will change.
 test_api_sh = gc.open("API testing")
@@ -26,7 +26,7 @@ print ("printing cell A1 from first sheet: \n" , test_api_sh.sheet1.get('A1'))
 ### If you’re using a service account, this new spreadsheet will be visible only to this account.
 ### To be able to access newly created spreadsheet from Google Sheets with your own Google account you must share it with your email.
 ### See how to share a spreadsheet in the statment below.
-# new_spreadsheet.share('sarya@vinokilo.com', perm_type='user',role='writer')
+# new_spreadsheet.share('name@email.com', perm_type='user',role='writer')
 
 ### let's select a working sheet!! not spreadsheet
 sheet_1 = test_api_sh.get_worksheet(0)
